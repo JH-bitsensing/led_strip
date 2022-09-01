@@ -1,3 +1,44 @@
+# ESP32 RMT based on LED TEST    
+
+* 테스트 환경       
+  * ESP32 Devkit V1    
+  * LED Strip (24 LED)      
+
+Flash 할 경우, Boot Button을 누르거나, Cap 달기     
+ [ESP32 Devkit V1 Flash](https://randomnerdtutorials.com/solved-failed-to-connect-to-esp32-timed-out-waiting-for-packet-header/)
+
+<br/>
+
+* 테스트 소스  
+  * [RMT( Remote Control Peripheral )](https://www.espressif.com/sites/default/files/documentation/esp32_technical_reference_manual_en.pdf#rmt)   
+
+
+<br/>
+
+* 테스트 결과  
+  1. LED Index 0: Indicate LED 로 테스트 진행 
+  2. LED Index 1~23 : LED 23개 주황색 Dimming TEST 진행 
+
+<br/>
+
+**총 24개 LED WS2818 테스트 진행완료** 
+
+RMT의 경우 ESP32의 어느 GPIO Pin에 RMT Channel 1개 와 연동하여 40MHz로 설정후    
+RGB값만 변경하면 쉽게 설정가능    
+
+<br/>
+<br/>
+
+ESP32 RMT LED Strip 소스     
+  https://github.com/espressif/esp-idf/tree/master/examples/peripherals/rmt/led_strip
+
+함수설정 HSL     
+  https://en.wikipedia.org/wiki/HSL_and_HSV
+
+<br/>
+<br/>
+
+
 # RMT Transmit Example -- LED Strip
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
